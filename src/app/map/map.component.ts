@@ -442,19 +442,19 @@ export class MapComponent implements AfterViewInit {
 
   getIncomeColor(d: number) {
     return d > 50000
-      ? '#8210fc'
+      ? '#460da0'//
       : d > 45000
-      ? '#a341f9' 
+      ? '#5c1ead' //
       : d > 40000
-      ? '#c981fc' 
+      ? '#7734ce' // 
       : d > 35000
-      ? '#cf8dfc' 
+      ? '#963dea' //
       : d > 30000
-      ? '#d497fd' 
+      ? '#af67ef' //
       : d > 25000
-      ? '#daa2fd' 
+      ? '#b573ef' //
       : d > 20000
-      ? '#dfadfd' 
+      ? '#dfadfd' //
       : d > 17500
       ? '#e4b7fe' 
       : d > 15000
@@ -462,8 +462,8 @@ export class MapComponent implements AfterViewInit {
       : d > 10000
       ? '#efcdfe' 
       : d > 5000
-      ? '#f5d7ff' 
-      : '#fae2ff' ;
+      ? '#f6e6fc' // 
+      : '#fceeff' // ;
   }
 
   ngAfterViewInit(): void {
