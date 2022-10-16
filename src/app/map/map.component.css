@@ -1,0 +1,32 @@
+.map-container {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 30px;
+    background-repeat: repeat;
+    
+  }
+  
+  .map-frame {
+    border: 2px solid black;
+    height: 100%;
+  }
+  
+  #map {
+    height: 100%;
+  }
+  
+  .currentLegend {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 10px 10px rgba(0,0,0, 0.1 );
+    border-radius: .5rem;
+    padding:1rem;
+    max-width: 175px;
+    position:absolute;
+    top: 90px;
+    left: 15px;
+    z-index: 999;
+  }
+
