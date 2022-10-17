@@ -20,3 +20,10 @@
     background-color:white;
     
 }
+
+:root {
+
+    --scene: 800px;
+    --cube_side: calc(var(--scene) - 3rem)
+}
+

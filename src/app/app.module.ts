@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { LayoutComponent } from './layout/layout.component';
+
 
 @NgModule({
-  declarations: [AppComponent, MapComponent, BarChartComponent],
-  imports: [BrowserModule, LeafletModule,  NgxChartsModule,],
+  declarations: [AppComponent, MapComponent, BarChartComponent, LayoutComponent],
+  imports: [BrowserModule, LeafletModule,  NgxChartsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
