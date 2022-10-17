@@ -15,7 +15,7 @@
                 </ul>
             </div>
             <div class="scene">
-                <div class="cube" id="cube" [ngClass]="'show'+side">
+                <div class="cube" id="cube" [ngClass]="'show-'+side">
                     <div class="cube_face cube_front" >
                         <div class="bg-light p-4 h-100 ">
 
@@ -52,23 +52,26 @@
                         </div>
                         
                     </div>
-                    <div class="cube_face cube_right bg-secondary"></div>
-                    <div class="cube_face cube_left"></div>
+                    <div class="cube_face cube_right "><!-- <app-map></app-map> -->
+
+                        </div>
+                    <div class="cube_face cube_left"><!-- <app-bar-chart></app-bar-chart> --></div>
                     <div class="cube_face cube_top"></div>
                     <div class="cube_face cube_bottom"></div>
                     <div class="cube_face cube_back"></div>
                 </div>
             </div>
-            <div class="variables-panel p-4 d-flex justify-content-center align-items-center">
+            <div class="variables-panel p-4 d-flex justify-content-center align-items-center flex-column">
+                <h5 class="text-light">SORT</h5>
                 <ul class="list-group ">
-                    <li class="list-group-item" (click)="setSort(0)">An item</li>
-                    <li class="list-group-item" (click)="setSort(1)">A second item</li>                    
+                    <li class="list-group-item" (click)="setSort(0)"><i class="bi bi-chevron-double-up"></i></li>
+                    <li class="list-group-item" (click)="setSort(1)"><i class="bi bi-chevron-double-down"></i></li>                    
                 </ul>                 
             </div>
         </div>                    
     </div>
-    <div class="range-panel bg-secondary text-center pt-4" style="max-width: 800px; margin: 0 auto;">
+    <div class="range-panel text-center pt-0" style="max-width: 500px; margin: 0 auto;">
         <label for="" id="resultRange"></label><br>
-        <input type="range" id="rangeCommand" class="form-range" min="0" max="5" step="0.1" id="customRange3" onchange="setRange()">
+        <input type="range" id="rangeCommand" class="form-range" min="2" max="79" step="1" [value]="members" (change)="setRange($event)">
     </div>      
 </main>

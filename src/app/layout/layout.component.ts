@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
+import { Component,  OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-layout',
@@ -43,9 +43,9 @@ export class LayoutComponent implements OnInit {
 
   }
 
-  setRange(i:number){ 
+  setRange(i:any){ 
 
-    this.members = i
+    this.members = i.target.value
 
    }
 
@@ -58,9 +58,6 @@ export class LayoutComponent implements OnInit {
       return (a[field] - b[field])
 
     }) 
-
-
-
   }
 
 }
