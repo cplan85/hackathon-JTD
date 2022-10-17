@@ -1,7 +1,7 @@
 export var single = [
     {
-      "name": "Germany",
-      "value": 8940000
+      "name": "el Raval",
+      "value": 71.2
     },
     {
       "name": "USA",
