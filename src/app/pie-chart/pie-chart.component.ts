@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, Input } from '@angular/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { single } from '../../data/pie-data';
 
@@ -7,8 +7,9 @@ import { single } from '../../data/pie-data';
   templateUrl: './pie-chart.component.html',
   styleUrls: ['./pie-chart.component.css']
 })
-export class PieChartComponent implements OnInit {
+export class PieChartComponent implements OnChanges {
 
+  @Input() range:number;
   single: any[];
   view: any = [600, 400];
 
@@ -41,7 +42,9 @@ export class PieChartComponent implements OnInit {
     console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }
 
-  ngOnInit(): void {
+  ngOnChanges(): void {
+
+    this.single = single.sort((a,b)=>b.value -  a.value).slice(0, this.range);
   }
 
 }

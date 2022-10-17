@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, Input } from '@angular/core';
 import { multi } from '../../data/data';
 import { Subject } from 'rxjs';
 
@@ -7,7 +7,9 @@ import { Subject } from 'rxjs';
   templateUrl: './bar-chart.component.html',
   styleUrls: ['./bar-chart.component.css']
 })
-export class BarChartComponent implements OnInit{
+export class BarChartComponent implements OnChanges{
+
+  @Input() range:number;
   multi!: any[];
   view: any = [700, 2000];
   sorted= multi!.sort((a,b) => b.series[1].value -  a.series[1].value);
@@ -59,10 +61,9 @@ updateChart(){
     console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }
 
-  ngOnInit() {
-    
-  console.log(this.multi, "hello world")
-  //console.log(this.sorted)
+  ngOnChanges(): void {
+
+    this.sorted = multi.sort((a,b)=>b.series[1].value -  a.series[1].value).slice(0, this.range);
   }
   }
 
