@@ -9,7 +9,8 @@ import { Subject } from 'rxjs';
 })
 export class BarChartComponent implements OnInit{
   multi!: any[];
-  view: any = [1000, 2000];
+  view: any = [700, 2000];
+  sorted= multi!.sort((a,b) => b.series[1].value -  a.series[1].value);
 
   // Observable for update 
 update$: Subject<any> = new Subject();
@@ -43,7 +44,7 @@ updateChart(){
 
   sortData() {
     console.log('clicked')
-    this.multi= multi!.sort((a,b) => b.series[1].value -  a.series[1].value);
+    
   }
 
   onSelect(data: any): void {
