@@ -10,18 +10,20 @@ import { single } from '../../data/pie-data';
 export class PieChartComponent implements OnInit {
 
   single: any[];
-  view: any[] = [700, 400];
+  view: any = [600, 400];
 
   // options
   gradient: boolean = true;
   showLegend: boolean = true;
   showLabels: boolean = true;
   isDoughnut: boolean = false;
-  legendPosition: string = 'below';
+  legendPosition: any = 'below';
 
-  colorScheme = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+  colorScheme:any = {
+    domain: ['#efcdfe', '#eac2fe', '#e4b7fe', '#dfadfd', '#b573ef', '#af67ef', '#963dea', '#C7734ce', '#5c1ead', '#460da0',]
+
   };
+  //['#efcdfe', '#eac2fe', '#e4b7fe', '#dfadfd', '#b573ef', '#af67ef', '#963dea', '#C7734ce', '#5c1ead', '#460da0',]
 
   constructor() {
     Object.assign(this, { single });
