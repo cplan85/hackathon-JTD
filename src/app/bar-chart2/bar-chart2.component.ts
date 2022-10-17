@@ -27,7 +27,7 @@ updateChart(){
   showXAxis: boolean = true;
   showYAxis: boolean = true;
   gradient: boolean = false;
-  showLegend: boolean = true;
+  showLegend: boolean = false;
   legendPosition: any = 'below';
   showXAxisLabel: boolean = true;
   yAxisLabel: string = 'Neighborhood';
