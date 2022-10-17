@@ -187,15 +187,84 @@ export var multi = [
     },
 
     {
-      "name": "la Font de la Guatlla",
+      "name": "Hostafrancs",
       "series": [
         {
           "name": "Residents aged 65+ living alone",
-          "value": 1102
+          "value": 1453
         },
         {
           "name": "Average Income",
-          "value": 19289.29
+          "value": 18579.00
+        }
+      ]
+    },
+
+    {
+      "name": "la Bordeta",
+      "series": [
+        {
+          "name": "Residents aged 65+ living alone",
+          "value": 1925
+        },
+        {
+          "name": "Average Income",
+          "value": 18703.92
+        }
+      ]
+    },
+
+    {
+      "name": "Sants - Badal",
+      "series": [
+        {
+          "name": "Residents aged 65+ living alone",
+          "value": 2502
+        },
+        {
+          "name": "Average Income",
+          "value": 17918.25
+        }
+      ]
+    },
+
+    {
+      "name": "Sants",
+      "series": [
+        {
+          "name": "Residents aged 65+ living alone",
+          "value": 4124
+        },
+        {
+          "name": "Average Income",
+          "value": 20532.00
+        }
+      ]
+    },
+
+    {
+      "name": "les Corts",
+      "series": [
+        {
+          "name": "Residents aged 65+ living alone",
+          "value": 5425
+        },
+        {
+          "name": "Average Income",
+          "value": 28655.43
+        }
+      ]
+    },
+    {
+      "name": "la Maternitat i Sant Ramon",
+      "series": [
+        {
+          "name": "Residents aged 65+ living alone",
+          "value": 2654
+        },
+        {
+          "name": "Average Income",
+          "value": 25425.20
         }
       ]
     },

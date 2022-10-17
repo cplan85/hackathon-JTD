@@ -22,6 +22,7 @@ export class MapComponent implements AfterViewInit {
   public currentBarrioWeb: string = '';
   public currentIncomeAvg: number = 0;
   public currentNombre: number = 0;
+  public currentRenta_familiar: number = 0;
   appSeniorResidents: L.Layer[] = [];
 
 
@@ -77,6 +78,7 @@ export class MapComponent implements AfterViewInit {
     this.currentNombre = e.target.feature.properties.Nombre;
     this.currentIncomeAvg = e.target.feature.properties.incomeAvg;
     this.currentBarrioWeb = e.target.feature.properties.WEB1;
+    this.currentRenta_familiar = e.target.feature.properties.renta_familiar;
     console.log('highlight feature', e.target.feature.properties.NOM);
     this.cRef.detectChanges();
   };
@@ -273,7 +275,7 @@ export class MapComponent implements AfterViewInit {
 
     greenSites.forEach((object: any) => {
       const finalObj = object[1];
-      console.log(finalObj.addresses, "final Obj")
+      //console.log(finalObj.addresses, "final Obj")
 
       var x_coord = finalObj.geo_epgs_4326 ? finalObj.geo_epgs_4326.x : 0;
       var y_coord = finalObj.geo_epgs_4326 ? finalObj.geo_epgs_4326.y : 0;
