@@ -62,8 +62,8 @@ updateChart(){
   }
 
   ngOnChanges(): void {
-
-    this.sorted = multi.sort((a,b)=>b.series[1].value -  a.series[1].value).slice(0, this.range);
+    console.log(this.range)
+    this.multi = multi.sort((a,b)=>b.series[1].value -  a.series[1].value).slice(0, this.range);
   }
   }
 

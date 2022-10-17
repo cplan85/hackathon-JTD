@@ -9,7 +9,7 @@
                     <li class="list-group-item" (click)="show('left')">Grafico 1</li>
                     <li class="list-group-item" (click)="show('top')">Grafico 2</li>
                     <li class="list-group-item" (click)="show('bottom')">Grafico 3</li>
-                    <li class="list-group-item" (click)="show('back')">Tabla</li>
+                    <!-- <li class="list-group-item" (click)="show('back')">Tabla</li> -->
                 </ul>
             </div>
             <div class="scene">
@@ -41,7 +41,7 @@
                     </div>
                     <div class="cube_face cube_bottom bg-light">
                         <div class="h-100 overflow-auto">
-                            <app-bar-chart2 [range]="members"></app-bar-chart2>
+                            <app-pie-chart [range]="members"></app-pie-chart>
                         </div> 
                     </div>
                     <div class="cube_face cube_back overflow-auto bg-light">
