@@ -10,6 +10,8 @@ export class BarChartComponent implements OnInit{
   multi!: any[];
   view: any = [1000, 2000];
 
+  sorted = multi!.sort((a,b) => b.series[1].value -  a.series[1].value)
+
   // options
   showXAxis: boolean = true;
   showYAxis: boolean = true;
@@ -46,6 +48,7 @@ export class BarChartComponent implements OnInit{
   ngOnInit() {
     
   console.log(this.multi, "hello world")
+  console.log(this.sorted)
   }
   }
 

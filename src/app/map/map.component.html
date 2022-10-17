@@ -11,10 +11,11 @@
   
         <div *ngIf="currentBarrio != ''; else elseBlock">
           <h4>{{currentBarrio}}</h4>
-          <h5>
+          <h6>
           {{currentNombre}} 65 years+ residents living alone
-          </h5>
-          <h5>Average Income: {{currentIncomeAvg}} €</h5>
+          </h6>
+          <h6>Average Income: {{currentIncomeAvg}} €</h6>
+          <h6>{{currentRenta_familiar}}% - Compared to BCN AVG</h6>
         </div>
   <ng-template #elseBlock><p>Turn on "Barrios" or "AvgIncome" layer on top right and hover over a neighborhood</p></ng-template>
   
