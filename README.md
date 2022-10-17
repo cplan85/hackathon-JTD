@@ -1,27 +1,55 @@
-# AngularLeafletExample
+# JTD - Hackathon
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
+[Back-End Repo](https://github.com/nillozama/HackatonPersonas65) 
+
+The JTD IT Academy Challenge is an Angular application of a analytics platform that allows Barcelona Employees to gather data visualizations related to Senior citizens living alone in different neighborhoods and economic levels based per neighborhoods.
+
+The main navigation format is based on an interactive 3D cube, and each face of the cube represents important datapoints.
+
+
+## :memo: **What do we still need to do**
+
+1. Login Administration of different users.
+
+2. Dynamic Filtering of different data points. 
+
+3. Sidebar Statistics representation in dynamic charts.
+
+4. Design and style the app.
+
+
+---
+
+## :seedling: **Getting Started with this project**
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Clone or fork the Repo, and ensure that you have the [Angular CLI](https://github.com/angular/angular-cli) installed.
 
-## Build
+In the project directory.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+npm install
+```
 
-## Running unit tests
+In the project directory.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+ng serve --open or ng s -o
+```
 
-## Running end-to-end tests
+## Contributing
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## Further help
+Please make sure to update tests as appropriate.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
