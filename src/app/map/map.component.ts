@@ -320,19 +320,11 @@ export class MapComponent implements AfterViewInit {
   myMainFilter = ['hue:324deg', 'saturate:250%'];
   myFilter = ['bright:99%', 'hue:226deg', 'saturate:150%'];
 
-  baseLayer3 = (L.tileLayer as any).colorFilter(
-    'https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg',
-    {
-      maxZoom: 18,
-      attribution:
-        '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      filter: this.myMainFilter,
-    }
-  );
 
 
 
-  baseLayer1 = (L.tileLayer as any).colorFilter(
+
+  baseLayer1 = (L.tileLayer as any)(
     'https://stamen-tiles.a.ssl.fastly.net/toner/{z}/{x}/{y}.png',
     {
       maxZoom: 18,
@@ -342,37 +334,11 @@ export class MapComponent implements AfterViewInit {
     }
   );
 
-  myFilter4 = ['invert:100%','grayscale:62%','bright:120%','saturate:398%'];
-  myFilter5 =   ['invert:100%','grayscale:6%','bright:149%','hue:216deg','saturate:354%'];
-  myFilter6 = ['bright:93%','contrast:103%','hue:335deg','saturate:381%'];
 
-  myFilter7 = ['grayscale:11%','bright:93%','contrast:103%','hue:309deg','saturate:381%'];
-  //latest
-  myFilter8 =  ['grayscale:11%','hue:307deg'];
 
-  myFilter9 =  ['grayscale:11%','hue:332deg'];
 
-  baseLayer4 = (L.tileLayer as any).colorFilter(
-    'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}.png',
-    {
-      maxZoom: 18,
-      attribution:
-        '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      filter: this.myFilter7,
-    }
-  );
 
-  baseLayer5 = (L.tileLayer as any).colorFilter(
-    'https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg',
-    {
-      maxZoom: 18,
-      attribution:
-        '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      filter: this.myFilter8,
-    }
-  );
-
-  tonerLayer = (L.tileLayer as any).colorFilter(
+  tonerLayer = (L.tileLayer as any)(
     'https://stamen-tiles-{s}.a.ssl.fastly.net/toner-labels/{z}/{x}/{y}{r}.{ext}',
     {
       maxZoom: 18,
@@ -400,7 +366,6 @@ export class MapComponent implements AfterViewInit {
   layersControl = {
     baseLayers: {
       'Open Street Map': this.baseLayer1,
-      'Latest Map': this.baseLayer5,
     },
     overlays: {
       labels: this.tonerLayer,
