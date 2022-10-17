@@ -51,7 +51,7 @@ main {
 
 .cube_front {
     transform: rotateY(0deg) translateZ(calc(var(--cube_side) / 2));
-    border: solid 5px yellowgreen
+    
 }
 
 .cube_right {
@@ -61,7 +61,7 @@ main {
 
 .cube_left {
     transform: rotateY(-90deg) translateZ(calc(var(--cube_side) / 2));
-    border: solid 5px yellowgreen
+    
 }
 
 .cube_top {
@@ -70,7 +70,7 @@ main {
 
 .cube_bottom {
     transform: rotateX(-90deg) translateZ(calc(var(--cube_side) / 2));
-    border: solid 5px yellowgreen
+    
 }
 
 .cube_back {
