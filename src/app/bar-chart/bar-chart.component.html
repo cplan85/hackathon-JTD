@@ -1,10 +1,12 @@
 <div class="chart-container">
   <h2>Neighborhoods Sorted by Income (highest to lowest)</h2>
+  <button type="button" (click)="sortData()" class="btn btn-danger">Sort Highest to Lowest income</button>
+<button type="button" class="btn btn-warning">Warning</button>
   <ngx-charts-bar-horizontal-2d
   [view]="view"
   [scheme]="colorScheme"
   [schemeType]="schemeType"
-  [results]="sorted"
+  [results]="multi"
   [gradient]="gradient"
   [xAxis]="showXAxis"
   [yAxis]="showYAxis"

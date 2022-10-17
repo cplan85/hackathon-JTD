@@ -1,4 +1,4 @@
-import 'leaflet.tilelayer.colorfilter';
+
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
 import * as geojson from 'geojson';

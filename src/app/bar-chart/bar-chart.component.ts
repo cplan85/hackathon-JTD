@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { multi } from '../../data/data';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-bar-chart',
@@ -10,7 +11,15 @@ export class BarChartComponent implements OnInit{
   multi!: any[];
   view: any = [1000, 2000];
 
-  sorted = multi!.sort((a,b) => b.series[1].value -  a.series[1].value)
+  // Observable for update 
+update$: Subject<any> = new Subject();
+
+// Update function
+updateChart(){
+    this.update$.next(true);
+}
+
+
 
   // options
   showXAxis: boolean = true;
@@ -32,6 +41,10 @@ export class BarChartComponent implements OnInit{
     Object.assign(this, { multi });
   }
 
+  sortData() {
+    console.log('clicked')
+    this.multi= multi!.sort((a,b) => b.series[1].value -  a.series[1].value);
+  }
 
   onSelect(data: any): void {
     console.log('Item clicked', JSON.parse(JSON.stringify(data)));
@@ -48,7 +61,7 @@ export class BarChartComponent implements OnInit{
   ngOnInit() {
     
   console.log(this.multi, "hello world")
-  console.log(this.sorted)
+  //console.log(this.sorted)
   }
   }
 
