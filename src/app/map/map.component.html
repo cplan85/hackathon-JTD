@@ -1,23 +1,25 @@
-<div class="map-container">
-    <div class="map-frame">
-      <div id="map" 
-      leaflet [leafletOptions]="options"
-      [leafletLayersControl]="layersControl"
-      (leafletMapReady)="onMapReady($event)"
-      [leafletLayers]="layers"></div>
-    </div>
-    <div class="currentLegend">
-
-      <div *ngIf="currentBarrio != ''; else elseBlock">
-        <h4>{{currentBarrio}}</h4>
-        <h5>
-        {{currentNombre}} 65 years+ residents living alone
-        </h5>
-        <h5>Average Income: {{currentIncomeAvg}} €</h5>
+<div>
+  <div class="map-container">
+      <div class="map-frame">
+        <div id="map"
+        leaflet [leafletOptions]="options"
+        [leafletLayersControl]="layersControl"
+        (leafletMapReady)="onMapReady($event)"
+        [leafletLayers]="layers"></div>
       </div>
-<ng-template #elseBlock><p>Turn on "Barrios" or "AvgIncome" layer on top right and hover over a neighborhood</p></ng-template>
-      
-     
-  </div>
-  </div>
+      <div class="currentLegend">
+  
+        <div *ngIf="currentBarrio != ''; else elseBlock">
+          <h4>{{currentBarrio}}</h4>
+          <h5>
+          {{currentNombre}} 65 years+ residents living alone
+          </h5>
+          <h5>Average Income: {{currentIncomeAvg}} €</h5>
+        </div>
+  <ng-template #elseBlock><p>Turn on "Barrios" or "AvgIncome" layer on top right and hover over a neighborhood</p></ng-template>
+  
+  
+    </div>
+    </div>
+</div>
 
