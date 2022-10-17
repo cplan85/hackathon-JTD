@@ -4,9 +4,7 @@
         <div class="i-top d-flex justify-content-center align-items-stretch">
             <div class="point-of-view-panel p-4 d-flex justify-content-center align-items-center">
                 <ul class="list-group ">
-                    <li class="list-group-item" (click)="show('front')">                           
-                        Resumen
-                    </li>
+                    <li class="list-group-item" (click)="show('front')">Resumen</li>
                     <li class="list-group-item map-option" (click)="show('right')">Mapa</li>
                     <li class="list-group-item" (click)="show('left')">Grafico 1</li>
                     <li class="list-group-item" (click)="show('top')">Grafico 2</li>
@@ -52,10 +50,8 @@
                         </div>
                         
                     </div>
-                    <div class="cube_face cube_right "><!-- <app-map></app-map> -->
-
-                        </div>
-                    <div class="cube_face cube_left"><!-- <app-bar-chart></app-bar-chart> --></div>
+                    <div class="cube_face cube_right "><!-- <app-map></app-map> --></div>
+                    <div class="cube_face cube_left overflow-auto bg-light"> <app-bar-chart></app-bar-chart> </div>
                     <div class="cube_face cube_top"></div>
                     <div class="cube_face cube_bottom"></div>
                     <div class="cube_face cube_back"></div>
