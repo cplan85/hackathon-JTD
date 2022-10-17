@@ -470,7 +470,13 @@ export class MapComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
 
-    this.getGreenSites();
-    this.onMapReady(this.map);
+    setTimeout(()=>{
+
+      this.getGreenSites();
+      this.onMapReady(this.map);
+
+    })
+
+   
   }
 }
