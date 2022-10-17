@@ -1,60 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnChanges, Input } from '@angular/core';
+import { multi } from '../../data/data';
 @Component({
   selector: 'app-resumen',
   templateUrl: './resumen.component.html',
   styleUrls: ['./resumen.component.css']
 })
-export class ResumenComponent implements OnInit {
+export class ResumenComponent implements OnChanges {
 
-  data = [
-    {
-      "name": "Germany",
-      "value": 40632,
-      "extra": {
-        "code": "de"
-      }
-    },
-    {
-      "name": "United States",
-      "value": 50000,
-      "extra": {
-        "code": "us"
-      }
-    },
-    {
-      "name": "France",
-      "value": 36745,
-      "extra": {
-        "code": "fr"
-      }
-    },
-    {
-      "name": "United Kingdom",
-      "value": 36240,
-      "extra": {
-        "code": "uk"
-      }
-    },
-    {
-      "name": "Spain",
-      "value": 33000,
-      "extra": {
-        "code": "es"
-      }
-    },
-    {
-      "name": "Italy",
-      "value": 35800,
-      "extra": {
-        "code": "it"
-      }
-    }
-  ];
-  
+  @Input() range:number;
+
+  data:any = [];
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnChanges(): void {
+
+    this.data = multi.map(e=>({
+
+      "name": e.name,
+      "value": e.series[0].value     
+
+    })).slice(0, this.range).sort((a,b)=>b.value-a.value);
+
+
   }
 
 }
