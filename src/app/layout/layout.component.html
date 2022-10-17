@@ -18,17 +18,34 @@
                         
                         <div class="">
                             <h4 class="text-center mb-4">Personas que viven solas en Barcelona</h4> 
-                            <app-resumen></app-resumen> 
+                            <app-resumen [range]="members"></app-resumen> 
                         </div>                 
                     
                     </div>
-                    <div class="cube_face cube_right bg-light"><app-map></app-map></div>
-                    <div class="cube_face cube_left  bg-light"> <app-bar-chart></app-bar-chart> </div>
-                    <div class="cube_face cube_top overflow-auto bg-light"><app-bar-chart2></app-bar-chart2></div>
-                    <div class="cube_face cube_bottom bg-light"><app-pie-chart></app-pie-chart></div>
+                    <div class="cube_face cube_right bg-light ">
+                        <div class="h-100 overflow-auto">
+                            <app-map></app-map>
+                        </div>
+                        
+                    </div>
+                    <div class="cube_face cube_left  bg-light">
+                        <div class="h-100 overflow-auto">
+                            <app-bar-chart [range]="members"></app-bar-chart> 
+                        </div> 
+                        
+                    </div>
+                    <div class="cube_face cube_top bg-light">
+                        <div class="h-100 overflow-auto">
+                            <app-bar-chart2 [range]="members"></app-bar-chart2>
+                        </div>                         
+                    </div>
+                    <div class="cube_face cube_bottom bg-light">
+                        <div class="h-100 overflow-auto">
+                            <app-bar-chart2 [range]="members"></app-bar-chart2>
+                        </div> 
+                    </div>
                     <div class="cube_face cube_back overflow-auto bg-light">
                         <div class="bg-light p-4 h-100 ">
-
                             <h4 class="text-center">
                                 Taula de dades
                             </h4>
