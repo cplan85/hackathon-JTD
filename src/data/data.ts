@@ -268,6 +268,45 @@ export var multi = [
         }
       ]
     },
+    {
+      "name": "Pedralbes",
+      "series": [
+        {
+          "name": "Residents aged 65+ living alone",
+          "value": 1207
+        },
+        {
+          "name": "Average Income",
+          "value": 41666.71
+        }
+      ]
+    },
+    {
+      "name": "Vallvidrera, el Tibidabo i les Planes",
+      "series": [
+        {
+          "name": "Residents aged 65+ living alone",
+          "value": 344
+        },
+        {
+          "name": "Average Income",
+          "value": 30409.67
+        }
+      ]
+    },
+    {
+      "name": "Sarrià",
+      "series": [
+        {
+          "name": "Residents aged 65+ living alone",
+          "value": 2239
+        },
+        {
+          "name": "Average Income",
+          "value": 37919.81
+        }
+      ]
+    },
    
   ];
   
