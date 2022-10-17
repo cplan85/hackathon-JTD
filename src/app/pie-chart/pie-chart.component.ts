@@ -43,7 +43,7 @@ export class PieChartComponent implements OnChanges {
   }
 
   ngOnChanges(): void {
-
+    
     this.single = single.sort((a,b)=>b.value -  a.value).slice(0, this.range);
   }
 
