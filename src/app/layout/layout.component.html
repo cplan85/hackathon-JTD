@@ -14,7 +14,19 @@
             </div>
             <div class="scene">
                 <div class="cube" id="cube" [ngClass]="'show-'+side">
-                    <div class="cube_face cube_front" >
+                    <div class="cube_face cube_front h-100 d-flex justify-content-center align-items-center overflow-auto bg-light" >
+                        
+                        <div class="">
+                            <h4 class="text-center mb-4">Personas que viven solas en Barcelona</h4> 
+                            <app-resumen></app-resumen> 
+                        </div>                 
+                    
+                    </div>
+                    <div class="cube_face cube_right overflow-auto bg-light"><app-map></app-map></div>
+                    <div class="cube_face cube_left overflow-auto bg-light"> <app-bar-chart></app-bar-chart> </div>
+                    <div class="cube_face cube_top overflow-auto bg-light"><app-pie-chart></app-pie-chart></div>
+                    <div class="cube_face cube_bottom overflow-auto bg-light"></div>
+                    <div class="cube_face cube_back overflow-auto bg-light">
                         <div class="bg-light p-4 h-100 ">
 
                             <h4 class="text-center">
@@ -48,13 +60,7 @@
                                   </tbody>
                             </table>
                         </div>
-                        
                     </div>
-                    <div class="cube_face cube_right "><app-map></app-map></div>
-                    <div class="cube_face cube_left overflow-auto bg-light"> <app-bar-chart></app-bar-chart> </div>
-                    <div class="cube_face cube_top"><app-pie-chart></app-pie-chart></div>
-                    <div class="cube_face cube_bottom"></div>
-                    <div class="cube_face cube_back"></div>
                 </div>
             </div>
             <div class="variables-panel p-4 d-flex justify-content-center align-items-center flex-column">

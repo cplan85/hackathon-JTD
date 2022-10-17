@@ -8,10 +8,11 @@ import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { LayoutComponent } from './layout/layout.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { ResumenComponent } from './resumen/resumen.component';
 
 
 @NgModule({
-  declarations: [AppComponent, MapComponent, BarChartComponent, LayoutComponent, PieChartComponent],
+  declarations: [AppComponent, MapComponent, BarChartComponent, LayoutComponent, PieChartComponent, ResumenComponent],
   imports: [BrowserModule, LeafletModule,  NgxChartsModule],
   providers: [],
   bootstrap: [AppComponent],
