@@ -1,4 +1,5 @@
 import { Component,  OnInit, Input } from '@angular/core';
+import { multi } from '../../data/data';
 
 @Component({
   selector: 'app-layout',
@@ -8,7 +9,7 @@ import { Component,  OnInit, Input } from '@angular/core';
 
 export class LayoutComponent implements OnInit {
 
-  @Input() data;
+  @Input() data = multi;
 
   side = 'front';
   members = 5;
@@ -17,8 +18,8 @@ export class LayoutComponent implements OnInit {
   fields ={
 
     'front':'',
-    'left':'',
-    'right':'',
+    'left':'1',
+    'right':'2',
     'bottom':'',
     'top':'',
     'back':'',
@@ -28,7 +29,7 @@ export class LayoutComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { console.log(multi)}
 
   show(clsName:string){ 
     
