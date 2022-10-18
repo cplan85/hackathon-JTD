@@ -1,11 +1,34 @@
 # JTD - Hackathon
 
+## ![header](challenge-image2.jpg)
+
 [Back-End Repo](https://github.com/nillozama/HackatonPersonas65) 
 
-The JTD IT Academy Challenge is an Angular application of a analytics platform that allows Barcelona Employees to gather data visualizations related to Senior citizens living alone in different neighborhoods and economic levels based per neighborhoods.
+Our [Jornada de Talent Digital Hackathon](https://nuwe.io/dev/event/hackathon-jornada-talent) submission is an Angular application of an analytics platform that allows Barcelona Municipiality employees to gather data visualizations related to the quantity of senior citizens living alone in different neighborhoods and economic levels per neighborhoods.
 
-The main navigation format is based on an interactive 3D cube, and each face of the cube represents important datapoints.
+The main navigation format is based on an interactive 3D cube, and each face of the cube represents distinct datapoints. Much of the data is generated through json files that are accessed through the backend servers. A Geo JSON file is also infused with the datapoints related to senior citizens resulting in an interactive color-coded map. The starting point for the data which the Data Science team processed can be found [here](https://opendata-ajuntament.barcelona.cat/data/ca/dataset/divter/resource/ed515bb8-502b-4dff-96dc-769f72767919).
 
+## **Preview**
+
+## ![preview](src/assets/preview.gif)
+
+## :wrench: **Tech used in this project**
+
+In this project we used Angular and Boostrap5 to develop a web app that reads a JSON file with datapoints in which row is listed the neighborhood name with
+- neighborhood name
+- higher education graduates
+- number of unemployed
+- cost of rents for family
+- number of senior citizens living alone
+- index of people aged 65 and older.
+
+The map was developed using [Leaflet](https://leafletjs.com/) and the neighborhoods are delimited by a GeoJSON file. A "get color" function colors each neighborhood based on the determined average income and the number of senior citizens living in that block.
+
+Corresponding bar graphs and pie charts are developed with the help of [Ngx-Charts](https://swimlane.github.io/ngx-charts/#/ngx-charts/bar-vertical). To feed the data to both chart types, the main JSON file had to be modified to become an proper input for each chart type.
+
+The Cube Transitions were developed using CSS transformations and translations.
+
+---
 
 ## :memo: **What do we still need to do**
 
