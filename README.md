@@ -8,6 +8,10 @@ Our [Jornada de Talent Digital Hackathon](https://nuwe.io/dev/event/hackathon-jo
 
 The main navigation format is based on an interactive 3D cube, and each face of the cube represents distinct datapoints. Much of the data is generated through json files that are accessed through the backend servers. A Geo JSON file is also infused with the datapoints related to senior citizens resulting in an interactive color-coded map. The starting point for the data which the Data Science team processed can be found [here](https://opendata-ajuntament.barcelona.cat/data/ca/dataset/divter/resource/ed515bb8-502b-4dff-96dc-769f72767919).
 
+<img src="1stPrize.png" alt="1st-Prize" width="40"/>
+
+### Our submission was chosen as the 1st Prize Winner! 
+
 ## **Preview**
 
 ## ![preview](src/assets/preview.gif)
